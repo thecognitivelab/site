@@ -1,5 +1,8 @@
 name: thecognitivelab
 region: nyc
+domains:
+  - domain: thecognitivelab.ai
+    type: PRIMARY
 static_sites:
   - name: site
     github:
