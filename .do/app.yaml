@@ -1,15 +1,11 @@
 name: thecognitivelab
 region: nyc
-services:
+static_sites:
   - name: site
     github:
       repo: thecognitivelab/site
       branch: main
       deploy_on_push: true
-    build_command: ""
     output_dir: /
-    static_site: true
     routes:
       - path: /
-    instance_count: 1
-    instance_size_slug: basic-xxs
