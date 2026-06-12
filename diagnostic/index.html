@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Native Diagnostic — The Cognitive Lab</title>
+<style>
+  :root {
+    --bg: #0a0a0b; --surface: #121215; --border: #1e1e24;
+    --text: #d4d4d8; --muted: #71717a; --accent: #f5f5f5;
+    --green: #22c55e; --amber: #f59e0b; --violet: #a78bfa;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,11,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 100; }
+  .nav-inner { max-width: 880px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { font-family: var(--mono); font-size: 14px; color: var(--accent); text-decoration: none; }
+
+  .hero { padding: 160px 0 60px; text-align: center; }
+  .hero h1 { font-size: 40px; font-weight: 600; letter-spacing: -1px; color: var(--accent); margin-bottom: 16px; }
+  .hero p { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 880px; margin: 0 auto 80px; padding: 0 24px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 32px 28px; text-decoration: none; transition: border-color 0.2s; display: flex; flex-direction: column;
+  }
+  .card:hover { border-color: var(--muted); }
+  .card-icon { font-family: var(--mono); font-size: 28px; margin-bottom: 16px; }
+  .card h3 { font-size: 17px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+  .card p { font-size: 13px; color: var(--muted); line-height: 1.5; flex: 1; }
+  .card .time { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 16px; }
+
+  .card-you { border-color: var(--violet); }
+  .card-you:hover { border-color: var(--violet); background: rgba(167,139,250,0.04); }
+  .card-you .card-icon { color: var(--violet); }
+
+  .card-team { border-color: var(--amber); }
+  .card-team:hover { border-color: var(--amber); background: rgba(245,158,11,0.04); }
+  .card-team .card-icon { color: var(--amber); }
+
+  .card-company { border-color: var(--green); }
+  .card-company:hover { border-color: var(--green); background: rgba(34,197,94,0.04); }
+  .card-company .card-icon { color: var(--green); }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 700px) {
+    .cards { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="nav-inner"><a href="/" class="nav-logo">the cognitive lab<span style="color:var(--muted)">™</span></a></div></nav>
+
+<section class="hero">
+  <h1>AI-Native Diagnostic</h1>
+  <p>Três assessments para três momentos diferentes. Escolha o seu.</p>
+</section>
+
+<div class="cards">
+  <a href="/diagnostic/you" class="card card-you">
+    <div class="card-icon">◈</div>
+    <h3>Para você</h3>
+    <p>Executivo individual. Descubra seu nível de fluência em AI como líder — e o que fazer para chegar ao próximo.</p>
+    <div class="time">4 minutos</div>
+  </a>
+
+  <a href="/diagnostic/team" class="card card-team">
+    <div class="card-icon">▣</div>
+    <h3>Para seu time</h3>
+    <p>Distribua para seus funcionários. Entenda o nível de fluência coletivo e os bloqueadores que impedem adoção.</p>
+    <div class="time">3 minutos</div>
+  </a>
+
+  <a href="/diagnostic/company" class="card card-company">
+    <div class="card-icon">◉</div>
+    <h3>Para sua empresa</h3>
+    <p>Diagnóstico organizacional. Avalie Cultura, Operating Model, Roles, Métricas e System Readiness da sua empresa.</p>
+    <div class="time">7 minutos</div>
+  </a>
+</div>
+
+<footer>
+  <a href="/">the cognitive lab</a>
+</footer>
+
+</body>
+</html>
